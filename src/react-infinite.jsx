@@ -445,8 +445,9 @@ var Infinite = React.createClass({
                 style={this.utils.buildScrollableStyle()}
                 onScroll={this.utils.nodeScrollListener}>
       <div ref={(c) => { this.smoothScrollingWrapper = c; }} style={infiniteScrollStyles}>
-        <div ref={(c) => { this.topSpacer = c; }}
-             style={this.buildHeightStyle(topSpacerHeight)}/>
+        {/*Top Spacer commented out 4/26/2017, in order to allow chat messages to become pushed down from the top of the container*/}
+        {/*<div ref={(c) => { this.topSpacer = c; }}
+             style={this.buildHeightStyle(topSpacerHeight)}/>*/}
         {this.computedProps.displayBottomUpwards && loadingSpinner}
           {displayables}
         {!this.computedProps.displayBottomUpwards && loadingSpinner}
